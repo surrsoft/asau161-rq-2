@@ -1,12 +1,12 @@
 import React from "react";
 import PrettyJSON from "react-json-pretty";
-import { RequestMethodEnum } from "./common/requestMethodEnum";
+import { RequestMethodEnum } from "./useRqRequest/types/RequestMethodEnum";
 import { isMyt1Type } from "./testTypes/testTypes";
 
 import {
   TestFlavorAxiosEnum,
   useRqRequestAxios
-} from "./useReq/useRqRequestAxios";
+} from "./useRqRequest/useRqRequestAxios";
 
 export function AppAxios() {
   const result = useRqRequestAxios({

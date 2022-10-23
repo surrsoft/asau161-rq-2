@@ -1,8 +1,8 @@
 import { useQuery, UseQueryResult, QueryKey } from "@tanstack/react-query";
 import loIsString from "lodash/isString";
-import { RequestMethodEnum } from "../common/requestMethodEnum";
-import { YesNoMayEnum } from "../common/common";
-import { isBodyHttpMethod } from "../common/isBodyHttpMethod";
+import { RequestMethodEnum } from "./types/RequestMethodEnum";
+import { YesNoMayEnum } from "./types/YesNoMayEnum";
+import { isBodyHttpMethod } from "./utils/isBodyHttpMethod";
 import axios from "axios";
 
 export const HTTP_CODE_UNDEF = -1;

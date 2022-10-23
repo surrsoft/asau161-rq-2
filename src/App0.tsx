@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import PrettyJSON from "react-json-pretty";
-import { RequestMethodEnum } from "./common/requestMethodEnum";
+import { RequestMethodEnum } from "./useRqRequest/types/RequestMethodEnum";
 import { isMyt1Type, isErr1Type } from "./testTypes/testTypes";
 
-import { TestFlavorEnum, useRqRequest } from "./useReq/useRqRequest";
+import { useRqRequest } from "./useRqRequest/useRqRequest";
+import { TestFlavorEnum } from "./useRqRequest/TestFlavorEnum";
 
 export function App0() {
   const [enabled, enabledSet] = useState(false);

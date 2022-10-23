@@ -1,5 +1,5 @@
-import { RequestMethodEnum } from "./requestMethodEnum";
-import { YesNoMayEnum } from "./common";
+import { RequestMethodEnum } from "../types/RequestMethodEnum";
+import { YesNoMayEnum } from "../types/YesNoMayEnum";
 
 /**
  * Возвращает информацию о том является ли для метода {@link method}

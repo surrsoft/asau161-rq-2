@@ -1,35 +1,12 @@
 import { useQuery, UseQueryResult, QueryKey } from "@tanstack/react-query";
 import loIsString from "lodash/isString";
-import { RequestMethodEnum } from "../common/requestMethodEnum";
-import { YesNoMayEnum } from "../common/common";
-import { isBodyHttpMethod } from "../common/isBodyHttpMethod";
+import { TestFlavorEnum } from "./types/TestFlavorEnum";
+import { ErrCodeEnum } from "./types/ErrCodeEnum";
+import { RequestMethodEnum } from "./types/RequestMethodEnum";
+import { YesNoMayEnum } from "./types/YesNoMayEnum";
+import { isBodyHttpMethod } from "./utils/isBodyHttpMethod";
 
 export const HTTP_CODE_UNDEF = -1;
-
-export enum ErrCodeEnum {
-  /** если невалидный URL */
-  URL = "url error",
-  /** ошибка на этапе разбора полученных от fetch данных */
-  JSON = "json error",
-  /** ошибка при выполнении fetch */
-  FETCH = "fetch error",
-  /** принудительная ошибка */
-  FORCED = "forced error",
-  /** запрос прерван т.к. превышено время ожидания ответа */
-  TIMEOUTE = "timeout error"
-}
-
-/** различные сценарии работы хука, для тестовых целей */
-export enum TestFlavorEnum {
-  /** по умолчанию - без применения flavor */
-  UNDEF = "undef",
-  /** искуственно делаем неверным {@link urlPath} */
-  F1 = "f1",
-  /** искуственно делаем неверным {@link urlHostname} */
-  F2 = "f2",
-  /** бросание ошибки сразу после {@link pauseMsc} */
-  F3 = "f3"
-}
 
 /** */
 export type PredicateType = (some: any) => boolean;
